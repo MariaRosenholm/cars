@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <title>Car's information</title>
+  </head>
+  <body>
+    <h2 id="carPageH2">Car's information</h2>
+    <main id="carPage">
+      <% result.forEach((car) => { %>
+      <p>Product number: <%= car.productNumber %></p>
+      <p>Model: <%= car.model %></p>
+      <p>Production year: <%= car.year %></p>
+      <p>Maximum speed (km/h): <%= car.maxspeed %></p>
+      <p>Rating (*): <%= car.rating %></p>
+      <p id="space">__________________________</p>
+      <% }); %>
+    </main>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/all">Get all cars' information</a></li>
+        <li><a href="/getOneCar">Find car(s)</a></li>
+        <li><a href="/add">Add a new car</a></li>
+        <li><a href="/update">Modify car's information</a></li>
+        <li><a href="/removecar">Remove a car</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

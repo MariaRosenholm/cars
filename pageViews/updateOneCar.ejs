@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <h2 id="oneH2"><%= header %></h2>
+      <% if(options === "show"){ %>
+      <form id="update" action="<%= action %>" method="POST">
+        <select required id="searchKey" name="searchKey">
+          <option value="productNumber">Product number</option>
+          <option value="model">Model</option>
+          <option value="year">Production year</option>
+          <option value="maxspeed">Maximum speed</option>
+          <option value="rating">Rating</option>
+        </select>
+        <input type="text" id="searchValue" name="searchValue" size="5" />
+        <button type="submit">Submit</button>
+      </form>
+      <% } else { %>
+      <form id="update" action="<%= action %>" method="POST">
+        <label>Product Number</label>
+        <input type="text" id="searchValue" name="searchValue" size="5" />
+        <button type="submit">Submit</button>
+      </form>
+      <% } %>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/all">Get all cars' information</a></li>
+          <li><a href="/add">Add a new car</a></li>
+          <li><a href="/removecar">Remove a car</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>

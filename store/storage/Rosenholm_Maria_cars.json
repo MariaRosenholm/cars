@@ -1,0 +1,51 @@
+[
+  {
+    "productNumber": 7,
+    "model": "Drof",
+    "year": 2017,
+    "maxspeed": 30,
+    "rating": "***"
+  },
+  {
+    "productNumber": 1,
+    "model": "Min IEco",
+    "year": 2010,
+    "maxspeed": 130,
+    "rating": "**"
+  },
+  {
+    "productNumber": 6,
+    "model": "Ovlov",
+    "year": 1920,
+    "maxspeed": 150,
+    "rating": "*"
+  },
+  {
+    "productNumber": 5,
+    "model": "FauWee",
+    "year": 2005,
+    "maxspeed": 70,
+    "rating": "**"
+  },
+  {
+    "productNumber": 4,
+    "model": "Moustin",
+    "year": 2011,
+    "maxspeed": 100,
+    "rating": "****"
+  },
+  {
+    "productNumber": 2,
+    "model": "Electro",
+    "year": 2015,
+    "maxspeed": 350,
+    "rating": "*"
+  },
+  {
+    "productNumber": 3,
+    "model": "Racer",
+    "year": 1990,
+    "maxspeed": 50,
+    "rating": "*****"
+  }
+]

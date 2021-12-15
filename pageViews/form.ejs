@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../public/favicon.svg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <main id="formMain">
+      <h2><%= header %></h2>
+      <% if(car.length == 1){ car.forEach((c)=> { %>
+      <form id="mainForm" action="<%= action %>" method="POST">
+        <div>
+          <label for="productNumber">Product number</label>
+          <input
+            readonly
+            id="productNumber"
+            name="productNumber"
+            value="<%= c.productNumber %>"
+          />
+        </div>
+        <div>
+          <label for="model">Model</label>
+          <input
+            required
+            type="text"
+            id="model"
+            name="model"
+            maxlength="15"
+            value="<%= c.model %>"
+            placeholder="for example Ferrari"
+          />
+        </div>
+        <div>
+          <label for="year">Procution year</label>
+          <input
+            type="text"
+            id="year"
+            name="year"
+            maxlength="4"
+            value="<%= c.year %>"
+            placeholder="for example 2021"
+          />
+        </div>
+        <div>
+          <label for="maxspeed">Maximum speed (km/h)</label>
+          <input
+            type="text"
+            id="maxspeed"
+            name="maxspeed"
+            maxlength="3"
+            value="<%= c.maxspeed %>"
+            placeholder="for example 100"
+          />
+        </div>
+        <div>
+          <label for="rating">Rating (*)</label>
+          <select id="rating" name="rating" value="<%= c.rating %>">
+            <option value="*">*</option>
+            <option value="**">**</option>
+            <option value="***">***</option>
+            <option value="****">****</option>
+            <option value="*****">*****</option>
+          </select>
+        </div>
+        <button class="submit" type="submit">Submit</button>
+      </form>
+      <% })} else { %>
+      <form id="mainForm" action="<%= action %>" method="POST">
+        <div>
+          <label for="model">Model</label>
+          <input
+            required
+            type="text"
+            id="model"
+            name="model"
+            maxlength="15"
+            placeholder="for example Ferrari"
+          />
+        </div>
+        <div>
+          <label for="year">Procution year</label>
+          <input
+            type="text"
+            id="year"
+            name="year"
+            maxlength="4"
+            placeholder="for example 2021"
+          />
+        </div>
+        <div>
+          <label for="maxspeed">Maximum speed (km/h)</label>
+          <input
+            type="text"
+            id="maxspeed"
+            name="maxspeed"
+            maxlength="3"
+            placeholder="for example 100"
+          />
+        </div>
+        <div>
+          <label for="rating">Rating (*)</label>
+          <select id="rating" name="rating">
+            <option value="*">*</option>
+            <option value="**">**</option>
+            <option value="***">***</option>
+            <option value="****">****</option>
+            <option value="*****">*****</option>
+          </select>
+        </div>
+        <button class="submit" type="submit">Submit</button>
+      </form>
+      <% } %>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/all">Get all cars' information</a></li>
+          <li><a href="/getOneCar">Find car(s)</a></li>
+          <li><a href="/add">Add a new car</a></li>
+          <li><a href="/update">Modify car's information</a></li>
+          <li><a href="/removecar">Remove a car</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>

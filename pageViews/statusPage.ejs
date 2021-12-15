@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><% title %></title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <h2 class="<%= status.type %>"><%= header %></h2>
+      <p class="<%= status.type %>"><%= status.message %></p>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/all">Get all cars' information</a></li>
+          <li><a href="/getOneCar">Find car(s)</a></li>
+          <li><a href="/add">Add a new car</a></li>
+          <li><a href="/update">Modify car's information</a></li>
+          <li><a href="/removecar">Remove a car</a></li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>
